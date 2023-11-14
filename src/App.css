@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+html,
+body {
+  min-width: 1300px;
+  padding: 5px;
+  background: linear-gradient(45deg, #190f2c, #200b30);
+  font-family: "Calibri Light";
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.container {
+  margin-right: 150px;
+  margin-left: 150px;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media screen and (max-width: 370px) {
+  .container {
+    margin-right: 0px;
+    margin-left: 0px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.header {
+  background-blend-mode: multiply;
+  background-image: url("asserts/main.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+  width: 100%;
+  height: 95vh;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin-bottom: 150px;
+}
+
+
+.header_title {
+  padding-top: 170px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.date {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  color: #200b30;
+  margin-bottom: 70px;
+  box-shadow: 0px 4px 30px rgba(9, 75, 157, 0.1);
+  padding: 40px;
+}
+
+
+.date_header {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+
+.date_text {
+  text-align: center;
+  font-size: 24px;
+}
+
+
+.copyright {
+  margin-top: 30px;
+  margin-right: 20px;
+  font-size: 24px;
+  text-align: right;
+}
+
+.memories_header {
+  margin-bottom: 30px;
+}
+
+.memories_title {
+  font-size: 52px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  transition: 1s;
+}
+
+img:hover {
+  transform: scale(1.2)
+}
+
+/* Main CSS */
+.grid-wrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-wrapper > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.grid-wrapper .wide {
+  grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+  grid-row: span 2;
+}
+
+.grid-wrapper .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+
+.congratulations {
+  margin-top: 100px;
+}
+
+.congratulations_title {
+  font-size: 52px;
+  margin-bottom: 80px;
+}
+
+.congratulations-item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 130px;
+}
+
+.congratulations-item_img {
+  text-align: right;
+
+}
+
+
+.congratulations-item_img > img {
+  border-radius: 20px;
+  width: 400px;
+
+}
+
+.congratulations-item-info {
+  padding-right: 200px;
+  padding-left: 100px;
+  margin: 0 auto;
+}
+
+.congratulations-item_text {
+  width: 700px;
+  font-size: 25px;
+}
+
+.person {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+
+  .congratulations-item {
+    display: flex;
+    margin-bottom: 130px;
   }
+
+  .congratulations-item_img > img {
+    width: 200px;
+    height: auto;
+  }
+
+
+  .congratulations-item-info {
+    padding-right: 200px;
+    padding-left: 100px;
+    margin: 0 auto;
+  }
+
+  .person {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .congratulations-item_text {
+
+    width: 600px;
+    font-size:14px;
+  }
+
 }
